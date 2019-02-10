@@ -1,0 +1,5 @@
+{
+    "data_path": "/Volumes/sambashare/dataset/kitti/data_depth_velodyne", 
+    "gt_path": "/Volumes/sambashare/dataset/kitti/data_depth_annotated",
+    "rgb_path": "/Volumes/sambashare/dataset/kitti/raw_data"
+}
