@@ -24,3 +24,6 @@ Annotated ground truth
 
 ![annotated_gt](https://raw.githubusercontent.com/jiangwei221/voronoi_depth_completion/master/readme_materials/images/annotated_gt.png)
 
+| Method        | MAE           | RMSE  |
+| ------------- |:-------------:| -----:|
+| Voronoi completion      | 458 | 2253 |
