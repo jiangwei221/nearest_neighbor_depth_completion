@@ -28,4 +28,4 @@ Annotated ground truth
 
 | Method        | MAE           | RMSE  |
 | ------------- |:-------------:| -----:|
-| Voronoi completion      | 458 | 2253 |
+| Nearest Neighbor completion      | 458 | 2253 |
