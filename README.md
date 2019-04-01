@@ -1,4 +1,4 @@
-# Voronoi/NearestNeighbor Depth Completion
+# NearestNeighbor Depth Completion
 
 Use Voronoi diagram/nearest neighbor to complete a sparse depth image. Used OpenGL to achieve realtime performance. This can be used as the most simple basline to compare with. We use KITTI dataset.
 
