@@ -12,7 +12,7 @@ Original RGB
 
 ![original_rgb](https://raw.githubusercontent.com/jiangwei221/voronoi_depth_completion/master/readme_materials/images/original_rgb.png)
 
-Voronoi depth completion(No use of RGB)
+NN depth completion(No use of RGB)
 
 ![voronoi_completion](https://raw.githubusercontent.com/jiangwei221/voronoi_depth_completion/master/readme_materials/images/voronoi_completion.png)
 
