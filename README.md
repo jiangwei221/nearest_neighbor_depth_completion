@@ -28,4 +28,4 @@ Annotated ground truth
 
 | Method        | MAE           | RMSE  |
 | ------------- |:-------------:| -----:|
-| Nearest Neighbor completion      | 458 | 2253 |
+| NN completion      | 434 | 2225 |
