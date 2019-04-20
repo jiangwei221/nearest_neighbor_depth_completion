@@ -1,7 +1,6 @@
 import time
 import numpy as np
 import torch
-import cv2
 
 DISABLE_EMBEDDING = False
 TEST_EMBEDDING = '''
@@ -11,6 +10,7 @@ import IPython
 IPython.embed()
 assert(0)
 '''
+
 
 def confirm(question='OK to continue?'):
     """
@@ -23,6 +23,7 @@ def confirm(question='OK to continue?'):
         answer = input(question + ' [y/n] ').lower()
     return answer == "y"
 
+
 def print_notification(content_list, notifi_type='NOTIFICATION'):
     print(('---------------------- {0} ----------------------'.format(notifi_type)))
     print()
@@ -31,18 +32,23 @@ def print_notification(content_list, notifi_type='NOTIFICATION'):
     print()
     print('----------------------------------------------------')
 
+
 def to_torch(nparray):
     tensor = torch.from_numpy(nparray).float().cuda()
     return torch.autograd.Variable(tensor, requires_grad=False)
 
+
 def to_numpy(cudavar):
     return cudavar.data.cpu().numpy()
+
 
 def isnan(x):
     return x != x
 
+
 def hasnan(x):
     return isnan(x).any()
+
 
 def split_float16_to_two_uint8(x):
     '''split float16 to two uint8
@@ -53,6 +59,7 @@ def split_float16_to_two_uint8(x):
     assert x.dtype == np.float16, 'input type is not float16'
     assert len(x.shape) == 1, 'input is not an 1d array'
     return np.frombuffer(x.tobytes('C'), dtype=np.uint8)
+
 
 def merge_two_uint8_to_float16(x):
     '''merge two uint8 to float16

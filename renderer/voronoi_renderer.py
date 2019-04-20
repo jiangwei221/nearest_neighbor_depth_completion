@@ -3,7 +3,6 @@ the output is a (W, H, 4) 8bit numpy array,
 we will encode the depth value use the first 2(R, G) channels,
 and encode confidence map use the last(B) channel.
 A channel is going to be used, so all ones.(due to the nature of renderer)
-
 modified from examples provided by vispy
 '''
 
@@ -69,7 +68,6 @@ class Canvas(app.Canvas):
             num_points {int} -- number of valid depth values
             center {[type]} -- the (x, y) coordinate of each valid depth value
             color {[type]} -- encode the 16bit depth value to (R, G) channels, corresponding to 'center'
-            radius -- the radius of circle/cone to render the voronoi diagram
         '''
 
         # We hide the canvas upon creation.
@@ -108,3 +106,28 @@ class Canvas(app.Canvas):
         self._time = time() - self._t0
         # Immediately exit the application.
         app.quit()
+
+if __name__ == '__main__':
+    size = (1242, 375)
+    num_points = 20
+    center = np.random.uniform(0, 1, (num_points, 2))
+    # center = np.ones((num_points, 2)) * 0
+    center[:, 0] = center[:, 0] * size[0]
+    center[:, 1] = center[:, 1] * size[1]
+    # exec(utils.TEST_EMBEDDING)
+    color = np.random.uniform(0.0, 1.0, (num_points, 3))
+    color[:, 2] = 1.0
+    c = Canvas(size=size, num_points=num_points, center=center, color=color)
+    size = c.size
+    app.run()
+
+    # The rendering is done, we get the rendering output (4D NumPy array)
+    render = c.im
+    print('Finished in %.1fms.' % (c._time*1e3))
+
+    # Now, we display this image with matplotlib to check.
+    import matplotlib.pyplot as plt
+    # plt.figure(figsize=(size[0]/100., size[1]/100.), dpi=100)
+    plt.imshow(render, interpolation='none')
+    plt.show()
+    exec(utils.TEST_EMBEDDING)

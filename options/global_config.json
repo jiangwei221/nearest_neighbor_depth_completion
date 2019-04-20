@@ -1,5 +1,7 @@
 {
-    "data_path": "/Volumes/sambashare/dataset/kitti/data_depth_velodyne", 
-    "gt_path": "/Volumes/sambashare/dataset/kitti/data_depth_annotated",
-    "rgb_path": "/Volumes/sambashare/dataset/kitti/raw_data"
+    "data_path": "/home/jiangwei/dataset/kitti/data_depth_velodyne", 
+    "gt_path": "/home/jiangwei/dataset/kitti/data_depth_annotated",
+    "rgb_path": "/home/jiangwei/dataset/kitti/raw_data",
+    "out": "/home/jiangwei/Desktop/courses/VoronoiDepthCompletion/out",
+    "runs": "./runs"
 }
