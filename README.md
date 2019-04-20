@@ -29,3 +29,4 @@ Annotated ground truth
 | Method        | MAE           | RMSE  |
 | ------------- |:-------------:| -----:|
 | NN completion      | 434 | 2225 |
+| NN + FCN refined      | -- | 1018 |
